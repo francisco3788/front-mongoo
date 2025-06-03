@@ -4,8 +4,8 @@ import TablaLecturas from "./TablaLecturas";
 import Graficas from "./Graficas";
 import Botones from "./Botones";
 
-// ✅ URL del backend en Render
-const baseURL = "https://mongo-backkk.onrender.com";
+// ✅ URL actualizada del backend en EC2
+const baseURL = "http://3.80.210.237:5000";
 
 const Home = () => {
   const [datos, setDatos] = useState([]);

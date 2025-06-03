@@ -3,8 +3,8 @@ import axios from "axios";
 import moment from "moment-timezone";
 import Chart from "chart.js/auto";
 
-// ✅ URL del backend desplegado en Render
-const baseURL = "https://mongo-backkk.onrender.com";
+// ✅ Dirección del backend en EC2
+const baseURL = "http://3.80.210.237:5000";
 
 export default function Graficas() {
   const chartRefs = [useRef(), useRef(), useRef(), useRef()];

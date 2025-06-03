@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'https://mongo-backkk.onrender.com/api'
+   baseURL: 'http://3.80.210.237:5000/api'
 
 })
 

@@ -1,6 +1,6 @@
 const Botones = () => {
-  // ✅ Dirección ya desplegada en Render
-  const baseURL = "https://mongo-backkk.onrender.com";
+  // ✅ Dirección EC2
+  const baseURL = "http://3.80.210.237:5000";
 
   const descargarExcel = () => {
     window.location.href = `${baseURL}/api/descargar`;

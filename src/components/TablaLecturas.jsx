@@ -2,8 +2,8 @@ import axios from "axios";
 import moment from "moment-timezone";
 import { useEffect, useState } from "react";
 
-// ✅ Cambiar por tu URL pública de Render
-const baseURL = "https://mongo-backkk.onrender.com";
+// ✅ URL actualizada del backend en EC2
+const baseURL = "http://3.80.210.237:5000";
 
 const TablaLecturas = () => {
   const [datos, setDatos] = useState([]);
