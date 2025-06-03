@@ -1,8 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-   baseURL: 'http://3.80.210.237:5000/api'
-
+   baseURL: 'https://misensores.duckdns.org/api'
 })
 
 export default api

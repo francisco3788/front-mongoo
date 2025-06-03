@@ -1,6 +1,6 @@
 const Botones = () => {
-  // ✅ Dirección EC2
-  const baseURL = "http://3.80.210.237:5000";
+  // ✅ Nueva dirección con dominio y HTTPS
+  const baseURL = "https://misensores.duckdns.org";
 
   const descargarExcel = () => {
     window.location.href = `${baseURL}/api/descargar`;

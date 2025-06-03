@@ -3,8 +3,8 @@ import axios from "axios";
 import moment from "moment-timezone";
 import Chart from "chart.js/auto";
 
-// ✅ Dirección del backend en EC2
-const baseURL = "http://3.80.210.237:5000";
+// ✅ Usar dominio seguro
+const baseURL = "https://misensores.duckdns.org";
 
 export default function Graficas() {
   const chartRefs = [useRef(), useRef(), useRef(), useRef()];

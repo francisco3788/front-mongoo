@@ -4,8 +4,8 @@ import TablaLecturas from "./TablaLecturas";
 import Graficas from "./Graficas";
 import Botones from "./Botones";
 
-// ✅ URL actualizada del backend en EC2
-const baseURL = "http://3.80.210.237:5000";
+// ✅ URL segura con dominio
+const baseURL = "https://misensores.duckdns.org";
 
 const Home = () => {
   const [datos, setDatos] = useState([]);
