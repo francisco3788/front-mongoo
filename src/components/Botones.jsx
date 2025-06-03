@@ -1,6 +1,6 @@
 const Botones = () => {
-  // ✅ Dirección directa al backend Flask
-  const baseURL = "http://localhost:5000";
+  // ✅ Dirección ya desplegada en Render
+  const baseURL = "https://mongo-backkk.onrender.com";
 
   const descargarExcel = () => {
     window.location.href = `${baseURL}/api/descargar`;

@@ -3,7 +3,8 @@ import axios from "axios";
 import moment from "moment-timezone";
 import Chart from "chart.js/auto";
 
-const baseURL = "http://192.168.1.74:5000";
+// ✅ URL del backend desplegado en Render
+const baseURL = "https://mongo-backkk.onrender.com";
 
 export default function Graficas() {
   const chartRefs = [useRef(), useRef(), useRef(), useRef()];
@@ -11,7 +12,7 @@ export default function Graficas() {
 
   const crearGrafico = (canvasRef, label, data, labels, index) => {
     if (chartInstances.current[index]) {
-      chartInstances.current[index].destroy(); // 👈 destruir si ya existe
+      chartInstances.current[index].destroy();
     }
 
     chartInstances.current[index] = new Chart(canvasRef.current, {
@@ -69,7 +70,6 @@ export default function Graficas() {
     const interval = setInterval(cargarDatos, 5000);
     return () => {
       clearInterval(interval);
-      // destruir todos los gráficos al salir
       chartInstances.current.forEach((chart) => chart?.destroy());
     };
   }, []);

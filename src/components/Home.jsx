@@ -4,13 +4,16 @@ import TablaLecturas from "./TablaLecturas";
 import Graficas from "./Graficas";
 import Botones from "./Botones";
 
+// ✅ URL del backend en Render
+const baseURL = "https://mongo-backkk.onrender.com";
+
 const Home = () => {
   const [datos, setDatos] = useState([]);
 
   useEffect(() => {
     const fetchDatos = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/datos");
+        const res = await axios.get(`${baseURL}/api/datos`);
         setDatos(res.data.reverse());
       } catch (error) {
         console.error("Error al cargar los datos:", error);

@@ -2,13 +2,16 @@ import axios from "axios";
 import moment from "moment-timezone";
 import { useEffect, useState } from "react";
 
+// ✅ Cambiar por tu URL pública de Render
+const baseURL = "https://mongo-backkk.onrender.com";
+
 const TablaLecturas = () => {
   const [datos, setDatos] = useState([]);
 
   useEffect(() => {
     const cargar = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/datos");
+        const res = await axios.get(`${baseURL}/api/datos`);
         setDatos(res.data.reverse());
       } catch (err) {
         console.error("Error al cargar tabla", err);
@@ -37,7 +40,9 @@ const TablaLecturas = () => {
         <tbody>
           {datos.map((d, i) => (
             <tr key={i} className="even:bg-gray-900">
-              <td className="border px-2 py-1">{moment(d.timestamp).tz("America/Bogota").format("YYYY-MM-DD HH:mm:ss")}</td>
+              <td className="border px-2 py-1">
+                {moment(d.timestamp).tz("America/Bogota").format("YYYY-MM-DD HH:mm:ss")}
+              </td>
               <td className="border px-2 py-1">{d.t1?.toFixed(2) ?? "—"}</td>
               <td className="border px-2 py-1">{d.t2?.toFixed(2) ?? "—"}</td>
               <td className="border px-2 py-1">{d.t3?.toFixed(2) ?? "—"}</td>
