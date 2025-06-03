@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom"; // 👈 Importar Link
 const Botones = () => {
-  // ✅ Nueva dirección con dominio y HTTPS
+  // ✅ Dirección con dominio y HTTPS
   const baseURL = "https://misensores.duckdns.org";
 
   const descargarExcel = () => {
@@ -42,12 +43,13 @@ const Botones = () => {
         </button>
       </form>
 
-      <a
-        href="/graficas"
+      {/* ✅ Usar Link para evitar error 404 en producción */}
+      <Link
+        to="/graficas"
         className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded"
       >
         📊 Ver Gráficas
-      </a>
+      </Link>
     </div>
   );
 };
